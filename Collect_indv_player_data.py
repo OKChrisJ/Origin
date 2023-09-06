@@ -6,6 +6,7 @@ import time
 from csv import writer, reader
 from decimal import *
 import pandas as pd
+import asyncio
 
 SEASONS = list(range(1980, 2024))
 months = ['november', 'december', 'january', 'february', 'march', 'april', 'may', 'june']
@@ -76,4 +77,6 @@ async def get_season_tables():
       f_object.close()
 
 
-  await get_season_tables()
+  #await get_season_tables()
+  await asyncio.sleep(2)
+get_season_tables()
